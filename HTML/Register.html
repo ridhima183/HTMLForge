@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with HTML5 Validation</title>
+    <link rel="stylesheet" href="/styles/register.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Registration Portal</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Create Your Account</h1>
+            <div class="form-container">
+                <form id="registrationForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                            <label for ="firstName" class="required"> First Name</label>
+                            <input type="text" id="firstName" name="firstName" required autofocus minlength="2"
+                            maxlength="30" pattern="[A-Za-z\s]+" placeholder="Enter your first Name"
+                            title="Only letters and spaces are not allowed">
+                            
+                            
+                            </div>
+                        </div>
+
+                        <div class="form-col">
+                            <div class="form-group">
+                            <label for ="lastName" class="required"> Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required autofocus minlength="2"
+                            maxlength="30" pattern="[A-Za-z\s]+" placeholder="Enter your last Name"
+                            title="Only letters and spaces are not allowed">
+                            
+                            
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="required">Password</label>
+                        <input type="password" id="password" name="password" required minlength="8"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$" title="Must contain at least one uppercase letter, one lowercase letter, 
+                               and one number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="required">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="required">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"
+                            title="Please enter a 10-digit phone number">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="birthdate">Date of Birth</label>
+                                <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2023-12-31">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="preferredTime">Preferred Contact Time</label>
+                                <input type="time" id="preferredTime" name="preferredTime">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="membershipMonth">Membership Start Month</label>
+                        <input type="month" id="membershipMonth" name="membershipMonth">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="">Select Country</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="au">Australia</option>
+                            <option value="in">India</option>
+                        </select>
+                    </div> 
+                    
+                     <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="preferNotToSay" name="gender" value="preferNotToSay">
+                                <label for="preferNotToSay">Prefer not to say</label>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <label>Interests</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sports" name="interests" value="sports">
+                                <label for="sports">Sports</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="music" name="interests" value="music">
+                                <label for="music">Music</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="reading" name="interests" value="reading">
+                                <label for="reading">Reading</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="travel" name="interests" value="travel">
+                                <label for="travel">Travel</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="technology" name="interests" value="technology">
+                                <label for="technology">Technology</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="cooking" name="interests" value="cooking">
+                                <label for="cooking">Cooking</label>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <label for="profileColor">Favorite Color</label>
+                        <input type="color" id="profileColor" name="profileColor" value="#3498db">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="website">Website (if any)</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="4" maxlength="500"
+                            placeholder="Tell us about yourself (max 500 characters)..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avatar" class="required">Profile Picture</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resume">Resume (Optional)</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" style="margin-top: 10px; width: 200px;">Create Account</button>
+                        <button type="reset" style="margin-top: 10px; width: 200px;">Reset</button>
+                    </div>
+                    
+                    
+                    
+                    
+  
+             
+             
+             
+             
+             
+             
+             
+             
+                    
+        	</form>
+
+                <div class="validation-info">
+                    <h3>Form Validation Information</h3>
+                    <ul>
+                        <li><strong>Name fields:</strong> Required, 2-30 characters, letters and spaces only</li>
+                        <li><strong>Email:</strong> Required, must be a valid email format</li>
+                        <li><strong>Password:</strong> Required, minimum 8 characters with at least one uppercase
+                            letter, one lowercase letter, and one number</li>
+                        <li><strong>Phone:</strong> Required, must be exactly 10 digits</li>
+                        <li><strong>Date of Birth:</strong> Optional, must be between 1900 and 2023</li>
+                        <li><strong>Website:</strong> Optional, must be a valid URL format</li>
+                        <li><strong>Bio:</strong> Optional, maximum 500 characters</li>
+                        <li><strong>Profile Picture:</strong> Required, must be an image file</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>We provide the best registration services with cutting-edge technology and user-friendly
+                        interfaces.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: info@example.com</li>
+                        <li>Phone: +1 (123) 456-7890</li>
+                        <li>Address: 123 Main St, City, Country</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Registration Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>              
+    
+</body>
+</html>
