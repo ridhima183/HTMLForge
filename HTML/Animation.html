@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Animation</title>
+    <style>
+        
+ div {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: relative;
+    animation: myturn 2s infinite;
+    }
+
+@keyframes myturn {
+    0%   {background: red; left: 0px; top: 0px;}
+    25%  {background: yellow; left: 200px; top: 0px;}
+    50%  {background: blue; left: 200px; top:   200px;}
+    75%  {background: green; left: 0px; top: 200px;}
+    100% {background: red; left: 0px; top: 0px;}
+}
+    </style>
+</head>
+<body>
+    <h1>The Keyframe rule</h1>
+    <div>
+
+    </div>
+</body>
+</html>
